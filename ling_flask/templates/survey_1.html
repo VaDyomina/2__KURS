@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tether.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/survey.css') }}">
+	<title>Анкета Часть 1</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div align="center">
+			<h2 class="header">Заполните, пожалуйста, следующую анкету:</h2>
+		</div>
+
+		<form action="/submited_1" method="POST">
+			<h5>
+				<ul>
+					<p class="input-wrapper">
+						Ваше имя:
+						<input required="" type="text" name="name">
+					</p>
+					<p class="input-wrapper">
+						Ваш пол:
+						<select required="" name="sex">
+							<option value=""></option>
+							<option value="0">муж</i></option>
+							<option value="1">жен</i></option> 
+						</select>
+					</p>
+					<p class="input-wrapper">
+						Ваш возраст: 
+						<select required="" name="age">
+							<option value=""></option>
+							<option value="0">до 18</option>
+							<option value="1">от 18 до 30</option>
+							<option value="2">от 30 до 45</option>
+							<option value="3">от 45 до 60</option>
+							<option value="4">более 60</option>
+						</select>
+					</p>
+					<p class="input-wrapper">
+						Город, в котором Вы прожили большую часть своей жизни:
+						<input required="" type="text" name="city">
+					</p>
+					<p class="input-wrapper">
+						Ваше образование:
+						<select required="" name="education">
+							<option value=""></option>
+							<option value="0">начальное общее</option>
+							<option value="1">среднее (полное) общее</option>
+							<option value="2">учусь в школе</option>
+							<option value="3">среднее специальное</option>
+							<option value="4">учусь в техникуме/коллежде</option>
+							<option value="5">учусь в университете</option>
+							<option value="6">неоконченное высшее</option>
+							<option value="7">высшее</option>
+						</select>
+					</p>
+					<p class="input-wrapper">
+						Ваш род деятельности:
+						<select required="" name="occupation">
+							<option value=""></option>
+							<option value="0">учусь в школе</option>
+							<option value="1">учусь в коллежде/техникуме</option>
+							<option value="2">учусь и работаю</option>
+							<option value="3">работаю</option>
+							<option value="4">не учусь и не работаю</option>
+						</select>
+					</p>
+					<p class="input-wrapper">
+						<button type="submit" class="btn btn-primary">Отправить</button>
+					</p>
+				</ul>
+			</h5>
+		</form>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tether.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/stats.css') }}">
+	<title>Статистика опроса</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div align="center">
+			<h2>Статистика:</h2>
+		</div>
+
+		<table>
+			<caption>Таблица со статистикой</caption>
+
+			<tr>
+				<th>q1</th>
+				<th>q2</th>
+				<th>q3</th>
+				<th>q4</th>
+				<th>q5</th>
+				<th>q6</th>
+				<th>q7</th>
+				<th>q8</th>
+				<th>q9</th>
+				<th>q10</th>
+				<th>q11</th>
+				<th>q12</th>
+			</tr>
+
+			{% for item in test %}
+			<tr>
+				<td>{{ item.q1 }}</td>
+				<td>{{ item.q2 }}</td>
+				<td>{{ item.q3 }}</td>
+				<td>{{ item.q4 }}</td>
+				<td>{{ item.q5 }}</td>
+				<td>{{ item.q6 }}</td>
+				<td>{{ item.q7 }}</td>
+				<td>{{ item.q8 }}</td>
+				<td>{{ item.q9 }}</td>
+				<td>{{ item.q10 }}</td>
+				<td>{{ item.q11 }}</td>
+				<td>{{ item.q12 }}</td>
+			</tr>
+			{% endfor %}
+
+		</table>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>

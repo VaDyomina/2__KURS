@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tether.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/results.css') }}">
+	<title>Результаты поиска по опросу</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div align="center">
+			<h2>Результаты поиска по опросу:</h2>
+		</div>
+
+		<table class="table">
+			<caption>Таблица с результатами поиска</caption>
+
+			<tr scope="row">
+				<th>Имя</th>
+				<th>Пол</th>
+				<th>Возраст</th>
+				<th>Город</th>
+				<th>Образование</th>
+				<th>Род деятельности</th>
+			</tr>
+
+			{% for item in survey_obj %}
+			<tr scope="row">
+				<td>{{ item.name }}</td>
+				<td>{{ item.sex }}</td>
+				<td>{{ item.age }}</td>
+				<td>{{ item.city }}</td>
+				<td>{{ item.education }}</td>
+				<td>{{ item.occupation }}</td>
+			</tr>
+			{% endfor %}
+
+		</table>
+	</div>
+	
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>

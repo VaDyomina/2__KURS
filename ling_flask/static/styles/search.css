@@ -1,0 +1,41 @@
+/* GENERAL */
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	padding: 50px;
+	background: url(../img/bg-search.jpg) no-repeat;
+}
+
+/* BLOCKS */
+
+.wrapper {
+	height: 100%;
+	padding: 25px;
+	background-color: white;
+}
+
+.header {
+	margin-bottom: 40px;
+}
+
+.input-wrapper {
+	margin: 30px 0;
+}
+
+.btn-primary {
+	color: white;
+	border: 0;
+	background-color: black;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tether.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/search.css') }}">
+	<title>Поиск по опросу</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div align="center">
+			<h2>Поиск по опросу:</h2>
+		</div>
+
+		<form action="/results_2" method="POST">
+			<h5>
+				<ul>
+					<p>
+						<h4>
+							<i>
+								<b>
+									Катя столкнулась с хирургом подростка, учащимся в старшей школе.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Кто учится в старшей школе?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q1" value = "teen"><b>подросток</b>
+							<input type = "radio" name = "q1" value = "surgeon"><b>хирург</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Катя столкнулась с хирургом подростка, прооперировавшего ее сестру.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Кто прооперировал сестру Кати?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q2" value = "teen"><b>подросток</b>
+							<input type = "radio" name = "q2" value = "surgeon"><b>хирург</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									На завтрак Маша съела кремовое пирожное и выпила кофе со сливками.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Какое пирожное съела Маша?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q3" value = "cream1"><b>кремовое</b>
+							<input type = "radio" name = "q3" value = "cream2"><b>сливочное</b>
+						</div>
+					</p>	
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Маша довольна клумбой одноклассника, жившим в паре кварталов от ее дома.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Кто живет в паре кварталов от дома Маши?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q4" value = "classmate"><b>одноклассник</b>
+							<input type = "radio" name = "q4" value = "bed"><b>клумба</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Маша довольна клумбой одноклассника, растущей в его саду.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Кто/что растет в саду одноклассника Маши?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q5" value = "classmate"><b>одноклассник</b>
+							<input type = "radio" name = "q5" value = "bed"><b>клумба</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Маша всегда была довольна клумбой одноклассника, растущей в его саду.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Кто/что растет в саду одноклассника Маши?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q6" value = "yes"><b>да</b>
+							<input type = "radio" name = "q6" value = "no"><b>нет</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Лера поссорилась с другом мужа, прожившим с ней 7 лет.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>С кем Лера жила 7 лет?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q7" value = "husband"><b>с мужем</b>
+							<input type = "radio" name = "q7" value = "friend"><b>с другом</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Лера поссорилась с другом мужа, знакомого ей несколько часов.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>С кем Лера знакома несколько часов?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q8" value = "husband"><b>с мужем</b>
+							<input type = "radio" name = "q8" value = "friend"><b>с другом</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Лера два дня назад поссорилась с другом мужа, знакомого ей несколько часов.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Лера давно поссорилась с другом мужа?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q9" value = "yes"><b>да</b>
+							<input type = "radio" name = "q9" value = "no"><b>нет</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Она встретилась с учителем сына, получившим двойку.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Кто получил двойку?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q10" value = "son"><b>сын</b>
+							<input type = "radio" name = "q10" value = "teacher"><b>учитель</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Она встретилась с учителем сына, преподававшего математику.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Кто получил двойку?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q11" value = "son"><b>сын</b>
+							<input type = "radio" name = "q11" value = "teacher"><b>учитель</b>
+						</div>
+					</p>
+
+					<p>
+						<h4>
+							<i>
+								<b>
+									Ее сын любит математику меньше, чем русский язык, но самый его любимый предмет в школе - это английский.
+								</b>
+							</i>
+						</h4>
+						<h5>
+							<b>Какой самый нелюбимый предмет в школе у ее сына?</b>
+						</h5>
+						<div> 
+							<input type = "radio" name = "q12" value = "rus"><b>русский язык</b>
+							<input type = "radio" name = "q12" value = "maths"><b>математика</b>
+							<input type = "radio" name = "q12" value = "eng"><b>английский язык</b>
+						</div>
+					</p>
+					
+					<p class="input-wrapper">
+						<button type="submit" class="btn btn-primary">Искать</button>
+					</p>
+				</ul>
+			</h5>
+		</form>
+	</div>
+	
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	
+</body>
+</html>

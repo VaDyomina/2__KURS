@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tether.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/search.css') }}">
+	<title>Поиск по опросу</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div align="center">
+			<h2>Поиск по опросу:</h2>
+		</div>
+
+		<form action="/results_1" method="POST">
+			<h5>
+				<ul>
+					<p class="input-wrapper">
+						Искать по имени:
+						<input type="text" name="name">
+					</p>
+					<p class="input-wrapper">
+						Искать по полу:
+						<select name="sex">
+							<option value=""></option>
+							<option value="0">муж</i></option>
+							<option value="1">жен</i></option> 
+						</select>
+					</p>
+					<p class="input-wrapper">
+						Искать по возрасту: 
+						<select name="age">
+							<option value=""></option>
+							<option value="0">до 18</option>
+							<option value="1">от 18 до 30</option>
+							<option value="2">от 30 до 45</option>
+							<option value="3">от 45 до 60</option>
+							<option value="4">более 60</option>
+						</select>
+					</p>
+					<p class="input-wrapper">
+						Искать по городу:
+						<input type="text" name="city">
+					</p>
+					<p class="input-wrapper">
+						Искать по образованию:
+						<select name="education">
+							<option value=""></option>
+							<option value="0">начальное общее</option>
+							<option value="1">среднее (полное) общее</option>
+							<option value="2">учусь в школе</option>
+							<option value="3">среднее специальное</option>
+							<option value="4">учусь в техникуме/коллежде</option>
+							<option value="5">учусь в университете</option>
+							<option value="6">неоконченное высшее</option>
+							<option value="7">высшее</option>
+						</select>
+					</p>
+					<p class="input-wrapper">
+						Искать по роду деятельности:
+						<select name="occupation">
+							<option value=""></option>
+							<option value="0">учусь в школе</option>
+							<option value="1">учусь в коллежде/техникуме</option>
+							<option value="2">учусь и работаю</option>
+							<option value="3">работаю</option>
+							<option value="4">не учусь и не работаю</option>
+						</select>
+					</p>
+					<p class="input-wrapper">
+						<button type="submit" class="btn btn-primary">Искать</button>
+					</p>
+				</ul>
+			</h5>
+		</form>
+	</div>
+	
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	
+</body>
+</html>
