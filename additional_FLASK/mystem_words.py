@@ -64,9 +64,9 @@ def stage_3(result, req):
             if req.endswith("ие"):
                 res_1 = req.replace("ие", "iя") # меняем окончания
             elif req.endswith("ые"):
-                res_1 = req.replace("ые", "ыя") # я не знаю, какделать это в связке с сущ,
+                res_1 = req.replace("ые", "ыя")
             elif req.endswith("иеся"):
-                res_1 = req.replace("иеся", "iяся") # поэтому меняю всегда, такие прил очень редко встречаются
+                res_1 = req.replace("иеся", "iяся")
             else:
                 res_1 = req # не такое окончание, идем дальше
         else:
