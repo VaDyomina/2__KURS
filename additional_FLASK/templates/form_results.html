@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="">
+	
+	<title>Результаты</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap itself -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/magister.css">
+
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+</head>
+
+
+<!-- Main (Home) section -->
+<section class="section" id="head">
+	<form action="http://127.0.0.1:5000/res" method="GET">
+	<div class="container">
+		<h2 class="text-center title">Ваш результат:<br>{{ total }}/10</h2><br>
+		<div class="row">
+			<div>
+				<h3>Здесь можно решить, что делать дальше:</h3>
+				<h4><a href="/test">Пройти тест ещё раз</h4>
+				<h4><a href="/">Перейти на главную</h4>
+				<h4><a href="/site">Посмотреть на сайт в дореволюционной орфографии</h4>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="assets/js/modernizr.custom.72241.js"></script>
+<!-- Custom template scripts -->
+<script src="assets/js/magister.js"></script>
+</body>
+</html>
