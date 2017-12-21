@@ -15,7 +15,7 @@ def downloading_page():
         user = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'
         req = urllib.request.Request(PAGE, headers={'User-Agent':user})
         with urllib.request.urlopen(req) as response:
-            text = response.read().decode('utf-8')
+                text = response.read().decode('utf-8')
         return text
 
 
@@ -64,56 +64,56 @@ def d2(parts, parts_of_speech):
 
 
 def graph_1(letters):
-    x1 = []
-    y1 = []
-    x2 = []
-    y2 = []
-    x3 = []
-    y3 = []
-    for k, v in letters.items():
-        if len(x1) <= 9: 
-                x1.append(k)
-                y1.append(v)
-        elif len(x2) <= 9:
-                x2.append(k)
-                y2.append(v)
-        else:
-                x3.append(k)
-                y3.append(v)
-    plt.rc('xtick', labelsize=7) # каждая bar chart с буквами вмешает в себя только 10 столбиков почему-то 
-    plt.bar(x1, y1, color = "#137e6d") # поэтому сделала 3 таблички для букв (их всего 21)
-    plt.title("Letters 1 part") # возможно, их можно было как-то вместить в одну табличку,
-    plt.xlabel("letter") # но я быстрее сделала так
-    plt.ylabel("quantity")
-    plt.savefig('plot_1_1.png')
-    plt.figure()
-    plt.bar(x2, y2, color = "#cb7723")
-    plt.title("Letters 2 part")
-    plt.xlabel("letter")
-    plt.ylabel("quantity")
-    plt.savefig('plot_1_2.png')
-    plt.figure()
-    plt.bar(x3, y3, color = "#9e003a")
-    plt.title("Letters 3 part")
-    plt.xlabel("letter")
-    plt.ylabel("quantity")
-    plt.savefig('plot_1_3.png')
-    plt.figure()
+        x1 = []
+        y1 = []
+        x2 = []
+        y2 = []
+        x3 = []
+        y3 = []
+        for k, v in letters.items():
+                if len(x1) <= 9: 
+                        x1.append(k)
+                        y1.append(v)
+                elif len(x2) <= 9:
+                        x2.append(k)
+                        y2.append(v)
+                else:
+                        x3.append(k)
+                        y3.append(v)
+        plt.rc('xtick', labelsize=7) # каждая bar chart с буквами вмешает в себя только 10 столбиков почему-то 
+        plt.bar(x1, y1, color = "#137e6d") # поэтому сделала 3 таблички для букв (их всего 21)
+        plt.title("Letters 1 part") # возможно, их можно было как-то вместить в одну табличку,
+        plt.xlabel("letter") # но я быстрее сделала так
+        plt.ylabel("quantity")
+        plt.savefig('plot_1_1.png')
+        plt.figure()
+        plt.bar(x2, y2, color = "#cb7723")
+        plt.title("Letters 2 part")
+        plt.xlabel("letter")
+        plt.ylabel("quantity")
+        plt.savefig('plot_1_2.png')
+        plt.figure()
+        plt.bar(x3, y3, color = "#9e003a")
+        plt.title("Letters 3 part")
+        plt.xlabel("letter")
+        plt.ylabel("quantity")
+        plt.savefig('plot_1_3.png')
+        plt.figure()
 
 
 def graph_2(parts_of_speech):
-    x = []
-    y = []
-    for k, v in parts_of_speech.items():
-        x.append(k)
-        y.append(v)
-    plt.rc('xtick', labelsize=7) 
-    plt.bar(x, y, color = "#fbdd7e")
-    plt.title("Parts of speech")
-    plt.xlabel("part")
-    plt.ylabel("quantity")
-    plt.savefig('plot_2.png')
-    plt.figure()
+        x = []
+        y = []
+        for k, v in parts_of_speech.items():
+                x.append(k)
+                y.append(v)
+        plt.rc('xtick', labelsize=7) 
+        plt.bar(x, y, color = "#fbdd7e")
+        plt.title("Parts of speech")
+        plt.xlabel("part")
+        plt.ylabel("quantity")
+        plt.savefig('plot_2.png')
+        plt.figure()
 
 
 def main():
