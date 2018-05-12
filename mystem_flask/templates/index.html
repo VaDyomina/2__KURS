@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Mystem generator</title>
+	<!--third-party stylesheets-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+	<!--internal stylesheet-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+<body>
+	<header class="page-header container">
+		<h1 class="row justify-content-center">Mystem and pymorphy generator</h1>
+	</header>
+	<main class="container">
+		<form action="/sentence_gen" method="POST" name="form" class="row justify-content-center" style="padding: 70px;">
+			<label for="input">Введите предложение:</label>
+			<input id="input" class="input" placeholder="Предложение" name="sentence" type="text"></input>
+			<input class="btn btn-primary" type="button" value="Сгенерировать" onclick="send_sentence();"></input>
+		</form>
+		<p id="answer" class="row justify-content-center" style="margin-top: -20px;"></p>
+	</main>
+	<footer class="container page-footer">
+		<small class="row justify-content-center">Василиса Дёмина 2018 &copy</small>
+	</footer>
+	
+	<!--third-party libs-->
+	<script src="{{ url_for('static', filename='js/libs/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/libs/popper.min.js') }}"></script>
+	<!--internal js-->
+	<script src="{{ url_for('static', filename='js/ajax.js') }}"></script>
+</body>
+</html>
