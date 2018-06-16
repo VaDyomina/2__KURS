@@ -1,0 +1,19 @@
+.main-image {
+	width: 40%;
+}
+.main-image-wrapper {
+	text-align: center; 
+	margin-top: 40px;
+}
+.main-form {
+	 padding: 40px;
+}
+.main-form-label {
+	padding: 8px 0 9px 0;
+}
+.main-form-input {
+	 margin: 0 7px;
+}
+.main-answer {
+	 margin-top: -20px;
+}
